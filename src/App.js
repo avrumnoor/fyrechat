@@ -40,7 +40,7 @@ function App() {
     <div className="App">
       <header>
         <h1>🔥Chat</h1>
-        <h3>A 90s-2000s-inspired Chatroom</h3>
+        <h3>A 90s-00s-inspired Chatroom</h3>
         <SignOut />
       </header>
       <section>{user ? <ChatRoom /> : <SignIn />}</section>

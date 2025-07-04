@@ -1,6 +1,6 @@
 # 🔥 FyreChat
 
-A retro-inspired, Firebase-powered chatroom app built with **React** and styled to resemble the nostalgic aesthetics of late 90s/early 2000s tech — featuring skeuomorphic UI elements and neon green terminal fonts. ✨
+A retro-inspired, Firebase-powered chatroom app built with **React** and styled to resemble the nostalgic aesthetics of late 90s/early 2000s tech — featuring retro-futuristic UI elements and neon green terminal fonts. ✨
 
 ![Screenshot](screenshot.png) <!-- Add a screenshot of your app in the repo -->
 
@@ -30,7 +30,7 @@ A retro-inspired, Firebase-powered chatroom app built with **React** and styled 
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/fyrechat.git
+git clone https://github.com/avrumnoor/fyrechat.git
 cd fyrechat
 ```
 
@@ -150,4 +150,4 @@ This project is licensed under the [MIT License](LICENSE).
 ---
 
 > Built with ❤️ by [Avrum Noor](https://github.com/avrumnoor)
-
+> [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/avrumnoor/) [![X (formerly Twitter) Follow](https://img.shields.io/twitter/follow/avrumnoor)](https://x.com/intent/follow?screen_name=avrumnoor)
