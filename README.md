@@ -1,70 +1,153 @@
-# Getting Started with Create React App
+# 🔥 FyreChat
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A retro-inspired, Firebase-powered chatroom app built with **React** and styled to resemble the nostalgic aesthetics of late 90s/early 2000s tech — featuring skeuomorphic UI elements and neon green terminal fonts. ✨
 
-## Available Scripts
+![Screenshot](screenshot.png) <!-- Add a screenshot of your app in the repo -->
+
+## 🚀 Features
+
+- 🔐 Google Authentication using Firebase Auth
+- 💬 Real-time messaging powered by Firebase Firestore
+- 📷 Displays user avatars and usernames
+- 🎨 Nostalgic styling inspired by early internet chatrooms and retro Apple/macOS UI
+- 📱 Fully responsive layout
+
+---
+
+## 🧰 Tech Stack
+
+| Technology        | Purpose                              |
+|------------------|--------------------------------------|
+| **React**         | UI framework                         |
+| **Firebase**      | Backend (Auth, Firestore, Analytics) |
+| **react-firebase-hooks** | Simplified real-time listeners   |
+| **CSS**           | Retro skeuomorphic + terminal theme |
+
+---
+
+## 📦 Installation & Setup
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/YOUR_USERNAME/fyrechat.git
+cd fyrechat
+```
+
+### 2. Install dependencies
+
+```bash
+npm install
+```
+
+### 3. Set up Firebase
+
+1. Go to [Firebase Console](https://console.firebase.google.com/)
+2. Create a new project
+3. Enable **Authentication** (Google Sign-In method)
+4. Create a **Firestore Database** in test mode (start with “Start in test mode”)
+5. Add a **Web App** to your Firebase project
+6. Replace the Firebase config in `src/App.js` with your credentials:
+
+```js
+const app = initializeApp({
+  apiKey: "YOUR_API_KEY",
+  authDomain: "YOUR_PROJECT.firebaseapp.com",
+  projectId: "YOUR_PROJECT_ID",
+  storageBucket: "YOUR_PROJECT.appspot.com",
+  messagingSenderId: "SENDER_ID",
+  appId: "YOUR_APP_ID",
+  measurementId: "YOUR_MEASUREMENT_ID"
+});
+```
+
+### 4. Configure Firestore Rules
+
+> Required to allow authenticated users to read/write messages:
+
+```js
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /messages/{message} {
+      allow read, write: if request.auth != null;
+    }
+  }
+}
+```
+
+### 5. Start the development server
+
+```bash
+npm start
+```
+
+This will open the app at [http://localhost:3000](http://localhost:3000)
+
+---
+
+## 🧪 Folder Structure
+
+```
+fyrechat/
+├── public/
+├── src/
+│   ├── App.js
+│   ├── App.css
+│   └── index.js
+├── .gitignore
+├── package.json
+└── README.md
+```
+
+---
+
+## 🛠️ Available Scripts
 
 In the project directory, you can run:
 
-### `npm start`
+- `npm start` – Runs the app in development mode
+- `npm run build` – Builds the app for production
+- `npm test` – Runs test suite (if added)
+- `npm run lint` – Lint your code (if ESLint is added)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🌍 Deployment
 
-### `npm test`
+To deploy your app with Firebase Hosting:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+npm install -g firebase-tools
+firebase login
+firebase init
+# Enable Firebase Hosting and associate with your project
+npm run build
+firebase deploy
+```
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🤝 Contributing
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Feel free to fork, clone, and submit pull requests. Suggestions, bug fixes, and feature enhancements are welcome!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## 📜 License
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+This project is licensed under the [MIT License](LICENSE).
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 🙌 Acknowledgements
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- [React](https://reactjs.org)
+- [Firebase](https://firebase.google.com/)
+- [react-firebase-hooks](https://github.com/csfrequency/react-firebase-hooks)
+- Inspiration from retro Apple interfaces and vintage chatrooms
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+> Built with ❤️ by [Avrum Noor](https://github.com/avrumnoor)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
