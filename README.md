@@ -3,7 +3,7 @@
 A retro-inspired, Firebase-powered chatroom app built with **React** and styled to resemble the nostalgic aesthetics of late 90s/early 2000s tech — featuring retro-futuristic UI elements and neon green terminal fonts. ✨
 
 ![Screenshot](screenshot.png) <!-- Add a screenshot of your app in the repo -->
-
+🔗 Live Demo: [fyrechats.web.app](https://fyrechats.web.app)
 ## 🚀 Features
 
 - 🔐 Google Authentication using Firebase Auth
