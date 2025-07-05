@@ -27,8 +27,8 @@ const app = initializeApp({
   projectId: "fyrechat-d05d0",
   storageBucket: "fyrechat-d05d0.firebasestorage.app",
   messagingSenderId: "915780525925",
-  appId: "1:915780525925:web:3787b6eb0777593308cb8c",
-  measurementId: "G-W4R4VE8XZ9",
+  appId: "1:915780525925:web:f906f97a923f404708cb8c",
+  measurementId: "G-JHEJ5H0VR8",
 });
 const auth = getAuth(app);
 const firestore = getFirestore(app);
